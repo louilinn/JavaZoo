@@ -26,4 +26,10 @@ public class Zoo {
     welcome.addAnimal(animal);
   }
 
+  public void printAbout() {
+    for (Place place : places) {
+      place.printInfo();
+    }
+  }
+
 }

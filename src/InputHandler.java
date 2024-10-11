@@ -41,6 +41,7 @@ public class InputHandler {
 
           break;
         case "E":
+          printZooInfo();
 
           break;
         default:
@@ -49,13 +50,13 @@ public class InputHandler {
     }
   }
 
-  public void addAnimal() {
+  private void addAnimal() {
     System.err.println("Vilket djur vill du lägga till?");
     String typeOfAnimal = scanner.nextLine();
 
     switch (typeOfAnimal) {
       case "apa":
-        Monkey monkey = new Monkey("Kalle", 0, false, false);
+        Monkey monkey = new Monkey("Kalle", 0, true, false);
         zoo.addAnimalToDefaultPlace(monkey);
         System.out.println("La till apan: ");
         monkey.printBasicInfo();
@@ -66,5 +67,8 @@ public class InputHandler {
     }
   }
 
+  private void printZooInfo() {
+    zoo.printAbout();
+  }
   //
 }
